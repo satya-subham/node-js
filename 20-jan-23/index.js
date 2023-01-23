@@ -1,4 +1,5 @@
-const http = require('http')
+const http = require('http');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
 
@@ -52,8 +53,17 @@ const server = http.createServer((req, res) => {
         req.on('end', ()=>{
             const parsedBody = Buffer.concat(body).toString()
             console.log(parsedBody);
+            const message = parsedBody.split('=')[1]
+            fs.writeFileSync('message.txt', message);
+
+            // Redirection (status code 302 for redirect)
+            res.writeHead(302, {
+                location: 'https://www.google.com'
+            });
+            res.end();
         })
-        console.log(req.body);
+        // res.statusCode = 302
+
     }
 });
 
