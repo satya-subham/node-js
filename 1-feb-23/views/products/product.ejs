@@ -1,0 +1,13 @@
+<%- include('../includes/head.ejs') %>
+
+    <h1>products page</h1>
+    <!-- <%= products %> -->
+    <div class="container">
+        <% for(let product of products) { %>
+            <div class="card">
+            <h1><%= product.title %></h1>
+            </div>
+         <% } %>
+    </div> 
+</body>
+</html>

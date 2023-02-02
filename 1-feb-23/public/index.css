@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+header {
+    background-color: rgb(188, 100, 223);
+}
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
+header li {
+    margin: 5px;
+}
+header a {
+    text-decoration: none;
+}
+.card {
+    padding: 10px;
+  width: 40%;
+  border-radius: 5px;
+
+  box-shadow: 2px 2px 2px grey;
+  margin: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.054);
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.active {
+   border-bottom: 5px solid white; 
+   color: white;
+}
